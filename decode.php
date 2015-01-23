@@ -1,8 +1,8 @@
 <?php
-$compfilename = $_POST['compfilename'];
-$exe = "./decompress ".$compfilename;
-system($exe);
- $infilename = $compfilename."decomp.dat";
+$compfilename = $_POST['compfilename']; //Get the name of the compile file name.
+$exe = "./decompress ".$compfilename; //Get the execution.
+system($exe); //Execute.
+ $infilename = $compfilename."decomp.dat"; //decompress file name.
  $infile = fopen($infilename, "r");
  if(!$infile)
  {
@@ -14,6 +14,9 @@ system($exe);
          echo fgetc($infile);
      }     
  }
+ /*
+ Above read the string of the decompressed file.
+ */
 
  fclose($infile);
 ?>

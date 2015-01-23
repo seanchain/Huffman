@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 template <typename E>
 class FileDecode {
 private:
